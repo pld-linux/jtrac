@@ -1,29 +1,29 @@
 # TODO
 # - build it from sources
 
-Summary:        Issue-tracking web application
-Name:           jtrac
-Version:        2.1.0
-Release:        0.1
-License:        Apache v2.0
-Group:          Networking/Daemons/Java/Servlets
-Source0:	http://sourceforge.net/projects/j-trac/files/jtrac/2.1.0/jtrac-2.1.0.zip
+Summary:	Issue-tracking web application
+Name:		jtrac
+Version:	2.1.0
+Release:	0.1
+License:	Apache v2.0
+Group:		Networking/Daemons/Java/Servlets
+Source0:	http://downloads.sourceforge.net/project/j-trac/jtrac/2.1.0/%{name}-%{version}.zip
 Source1:	%{name}-context.xml
 # Source0-md5:  6254396d33012f65d0886b67287b257b
-URL:            http://sourceforge.net/projects/j-trac/
+URL:		http://sourceforge.net/projects/j-trac/
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	tomcat
 Requires:	jpackage-utils
+Requires:	tomcat
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 JTrac is a generic issue-tracking web-application that can be easily
 customized by adding custom fields and drop-downs. Features include
-customizable workflow, field level permissions, e-mail integration, file
-attachments and a detailed history view.
+customizable workflow, field level permissions, e-mail integration,
+file attachments and a detailed history view.
 
 %prep
 %setup -qc

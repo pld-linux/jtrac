@@ -3,4 +3,6 @@
 <Context path="/jtrac" docBase="/usr/share/jtrac"
         privileged="false" allowLinking="true">
 
+	<Parameter name="jtrac.home" value="/var/lib/jtrack"/>
+
 </Context>

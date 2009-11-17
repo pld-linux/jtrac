@@ -26,15 +26,14 @@ customizable workflow, field level permissions, e-mail integration,
 file attachments and a detailed history view.
 
 %prep
-%setup -qc
-unzip -d jtrac jtrac.war
+%setup -qn %{name}
+unzip -qd jtrac jtrac.war
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir}/%{name},%{_datadir}/%{name},%{_sharedstatedir}/{%{name},tomcat/conf/Catalina/localhost}}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_sharedstatedir}/tomcat/conf/Catalina/localhost/%{name}.xml
+install %{SOURCE1} $RPM_BUILD_ROOT%{_sharedstatedir}/tomcat/conf/Catalina/localhost/%{name}.xml
 cp -a . $RPM_BUILD_ROOT%{_datadir}/%{name}
-ln -sf %{_sysconfdir}/%{name}/web.xml $RPM_BUILD_ROOT%{_datadir}/%{name}/WEB-INF/web.xml
 
 %clean
 rm -rf $RPM_BUILD_ROOT

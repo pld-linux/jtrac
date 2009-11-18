@@ -14,6 +14,7 @@ URL:		http://sourceforge.net/projects/j-trac/
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	java-sun-jre >= 1.6.0.17
 Requires:	jpackage-utils
 Requires:	tomcat
 BuildArch:	noarch

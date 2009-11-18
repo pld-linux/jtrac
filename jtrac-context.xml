@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id$ -->
-<Context path="/jtrac" docBase="/usr/share/jtrac"
+<Context path="/jtrac" docBase="/usr/share/java/jtrac.war"
         privileged="false" allowLinking="true">
 
 	<Parameter name="jtrac.home" value="/var/lib/jtrack"/>

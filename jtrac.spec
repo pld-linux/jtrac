@@ -27,13 +27,12 @@ file attachments and a detailed history view.
 
 %prep
 %setup -qn %{name}
-unzip -qd jtrac jtrac.war
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir}/%{name},%{_datadir}/%{name},%{_sharedstatedir}/{%{name},tomcat/conf/Catalina/localhost}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sharedstatedir}/tomcat/conf/Catalina/localhost/%{name}.xml
-cp -a . $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp %{name}.war $RPM_BUILD_ROOT%{_datadir}/%{name}/%{name}.war
 
 %clean
 rm -rf $RPM_BUILD_ROOT

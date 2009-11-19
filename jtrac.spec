@@ -4,7 +4,7 @@
 Summary:	Issue-tracking web application
 Name:		jtrac
 Version:	2.1.0
-Release:	0.1
+Release:	1
 License:	Apache v2.0
 Group:		Networking/Daemons/Java/Servlets
 Source0:	http://downloads.sourceforge.net/project/j-trac/jtrac/2.1.0/%{name}-%{version}.zip
@@ -51,13 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{_sysconfdir}/%{name}
-# do not make this file writeable by tomcat. We do not want to allow user to
-# undeploy this app via tomcat manager.
 %{_sharedstatedir}/tomcat/conf/Catalina/localhost/%{name}.xml
-%verify(not md5 mtime size) %config(noreplace) %{_sysconfdir}/%{name}/tomcat-context.xml
-%verify(not md5 mtime size) %config(noreplace) %{_sysconfdir}/%{name}/%{name}.properties
-%verify(not md5 mtime size) %config(noreplace) %{_sysconfdir}/%{name}/log4j.properties
+%verify(not md5 mtime size) %config(noreplace) %attr(750,root,servlet) %{_sysconfdir}/%{name}
 %{_datadir}/%{name}
 %attr(770,root,servlet) %{_sharedstatedir}/%{name}
 %attr(770,root,servlet) /var/log/%{name}

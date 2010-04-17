@@ -17,7 +17,7 @@ BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
 BuildRequires:	unzip
-Requires:	java-sun-jre >= 1.6.0.17
+Requires:	jre >= 1.6.0.17
 Requires:	jpackage-utils
 Requires:	tomcat
 BuildArch:	noarch

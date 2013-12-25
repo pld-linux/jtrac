@@ -4,7 +4,7 @@
 Summary:	Issue-tracking web application
 Name:		jtrac
 Version:	2.1.0
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Networking/Daemons/Java/Servlets
 Source0:	http://downloads.sourceforge.net/project/j-trac/jtrac/2.1.0/%{name}-%{version}.zip

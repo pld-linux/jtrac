@@ -50,7 +50,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%verify(not md5 mtime size) %config(noreplace) %attr(750,root,servlet) %{_sysconfdir}/%{name}
+%dir %{_sysconfdir}/%{name}
+%verify(not md5 mtime size) %config(noreplace) %attr(750,root,servlet) %{_sysconfdir}/%{name}/jtrac.properties
+%verify(not md5 mtime size) %config(noreplace) %attr(750,root,servlet) %{_sysconfdir}/%{name}/log4j.properties
+%verify(not md5 mtime size) %config(noreplace) %attr(750,root,servlet) %{_sysconfdir}/%{name}/tomcat-context.xml
 %verify(not md5 mtime size) %config(noreplace) %{_tomcatconfdir}/%{name}.xml
 %{_datadir}/%{name}
 %attr(770,root,servlet) %{_sharedstatedir}/%{name}
